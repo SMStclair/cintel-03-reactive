@@ -1,0 +1,9 @@
+pandas
+plotly
+palmerpenguins
+faicons
+pyarrow
+seaborn
+shiny
+shinylive
+shinywidgets
