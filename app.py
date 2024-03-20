@@ -69,7 +69,7 @@ with ui.navset_card_tab(id="tab"):
         @render_plotly
         def plotly_histogram():
             plotly_hist = px.histogram(
-                data_frame=penguins_df,
+                data_frame=filtered_data(),
                 x=input.selected_attribute(),
                 nbins=input.plotly_bin_count(),
                 color="species",
@@ -85,7 +85,7 @@ with ui.navset_card_tab(id="tab"):
         @render.plot
         def seaborn_histogram():
             seaborn_hist = sns.histplot(
-                data=penguins_df,
+                data=filtered_data(),
                 x=input.selected_attribute(),
                 bins=input.seaborn_bin_count(),
             )
@@ -99,7 +99,7 @@ with ui.navset_card_tab(id="tab"):
         @render_plotly
         def plotly_scatterplot():
             plotly_scatter = px.scatter(
-                penguins_df,
+                filtered_data(),
                 x="bill_depth_mm",
                 y="bill_length_mm",
                 color="species",
