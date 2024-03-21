@@ -12,7 +12,7 @@ penguins_df = load_penguins()
 # Sidebar and attribute selectize
 ui.page_opts(title="Sean Penguin Data", fillable=True)
 with ui.sidebar(open="open"):
-    ui.h2("Sidebar")
+    ui.h2("Inputs")
     ui.input_selectize(
         "selected_attribute",
         "Select Attribute",
